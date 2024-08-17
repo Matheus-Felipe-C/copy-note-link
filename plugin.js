@@ -10,7 +10,7 @@ const plugin = {
                 const noteURL = await app.getNoteURL({ uuid: noteUUID });
 
                 //Write text into clipboard
-                navigator.clipboard.writeText(noteURL);
+                await navigator.clipboard.writeText(noteURL);
                 console.log("Note URL copied:" + noteURL);
             } catch (error) {
                 console.log(error);
